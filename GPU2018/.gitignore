@@ -1,0 +1,8 @@
+*.png
+*.jpeg
+*.jpg
+*.txt
+*.o
+*.d
+check*
+mobilenetv2
