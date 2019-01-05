@@ -12,6 +12,7 @@
 
 #define CPU_BIAS 1
 
+
 int argmax(BLOB* b){
     //find index of channel that is maximum
     float m=b->data[0];
@@ -32,6 +33,10 @@ int main(int argc, char* argv[]){
 #ifndef SILENT
     //set stdout to line buffered such that piping to "tee" does not delay
     setvbuf(stdout, NULL, _IOLBF, 0);
+#endif
+
+#ifndef CUDA_NO_SM_20_ATOMIC_INTRINSICS
+    printf("WARNING! Not using atomics!\n");
 #endif
 
     //read png into image structure

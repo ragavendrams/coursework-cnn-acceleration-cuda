@@ -94,12 +94,17 @@ BLOB* convolution(BLOB* input, conv_param_t* p){
 //                     blob_data(out,o,m,n)=bias[o];
 // // //                     printf("Bias using CPU\n");
 // //#else
+        printf("Ragavendra\n");
        out = set_bias(bias,out,out->d,out->h,out->w);  
 //#endif
         //cleanup bias
         free(bias);
     }
-
+// printf("Out bias start\n");
+//    if(p->bias!=NULL)
+//     for(int i = 0;i< out->d* out->h* out->w;i++ )
+//         printf("i:%d outdata:%f \n",i,out->data[i]);
+// printf("Out bias end\n" );
     //load weights
     BLOB* w = load_weights(in, p);
 

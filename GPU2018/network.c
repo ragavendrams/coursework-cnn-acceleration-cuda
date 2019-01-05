@@ -49,6 +49,9 @@ BLOB* network(Network* net, BLOB* input){
                         layer_blobs[layer.input],
                         &(layer.param.conv)
                     );
+
+                     //for(int i=0;i<out->d * out->h * out->w ;i++)
+                        //printf("i:%d out[i]:%f\n",i,out->data[i] );
                 break;
 
                 case ELTWISE:
@@ -58,6 +61,9 @@ BLOB* network(Network* net, BLOB* input){
                         &(layer.param.eltwise)
                     );
 
+                     // for(int i=0;i<out->d * out->h * out->w ;i++)
+                     //        printf("i:%d out[i]:%f\n",i,out->data[i] );
+
                 break;
 
                 case POOLING:
@@ -65,6 +71,9 @@ BLOB* network(Network* net, BLOB* input){
                         layer_blobs[layer.input],
                         &(layer.param.pool)
                     );
+                    // for(int i=0;i<out->d * out->h * out->w ;i++)
+                    //     printf("i:%d out[i]:%f\n",i,out->data[i] );         
+                    //printf("---------------------I am in pooling layer---------------------\n");
                 break;
 
                 case NONE:

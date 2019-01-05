@@ -32,8 +32,8 @@ BLOB* gpu_batchnorm_scale(BLOB* out,float* mean,float* var, float bn_eps,float* 
     dim3 Grid(out->w/threadlim_xyz+1,out->h/threadlim_xyz+1,out->d/threadlim_xyz+1);
     dim3 Block(threadlim_xyz,threadlim_xyz,threadlim_xyz);
     
-    printf("Grid : %d x %d x %d \n",out->w/threadlim_xyz+1,out->h/threadlim_xyz+1,out->d/threadlim_xyz+1 );
-    printf("Block : %d x %d x %d \n",threadlim_xyz,threadlim_xyz,threadlim_xyz );
+    // printf("Grid : %d x %d x %d \n",out->w/threadlim_xyz+1,out->h/threadlim_xyz+1,out->d/threadlim_xyz+1 );
+    // printf("Block : %d x %d x %d \n",threadlim_xyz,threadlim_xyz,threadlim_xyz );
     
     //create pointers to data to be sent to gpu
     float *device_data=NULL,*device_out=NULL,*device_mean=NULL,*device_var=NULL, *device_scale=NULL, *device_scale_bias=NULL;
