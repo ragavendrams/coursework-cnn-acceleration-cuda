@@ -1,3 +1,5 @@
+This is done as part of coursework for the Embedded Systems Masters programme at Eindhoven University of Technology, Netherlands 
+
 Image classification with Convolutional Neural Networks
 ---------------------------------------------------------
 The code provided here is a pure C implementation of Google's [mobilenetv2](https://arxiv.org/abs/1801.04381), trained for the [imagenet](www.image-net.org/) competition.
